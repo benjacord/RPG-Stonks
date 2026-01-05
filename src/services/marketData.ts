@@ -66,7 +66,7 @@ const fetchStockPrice = async (symbol: string): Promise<{ price: number; change2
     }
 };
 
-export const fetchPrice = async (symbol: string, type: 'crypto' | 'stock' | 'fx'): Promise<{ price: number; change24h: number }> => {
+export const fetchPrice = async (symbol: string, _type: 'crypto' | 'stock' | 'fx'): Promise<{ price: number; change24h: number }> => {
     const normalized = normalizeSymbol(symbol);
 
     // 1. Check Cache
